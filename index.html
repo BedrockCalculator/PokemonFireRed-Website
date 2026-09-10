@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokémon FireRed - EmulatorJS</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      height: 100vh;
+    }
+    #game-container {
+      width: 100%;
+      height: 100%;
+      max-width: 800px;
+      max-height: 600px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- The element where the emulator loads -->
+  <div id="game-container"></div>
+
+  <!-- EmulatorJS Script Setup -->
+  <script type="text/javascript">
+    // 1. Point to the DOM element selector
+    EJS_player = '#game-container';
+
+    // 2. Specify the console system ('gba' for Game Boy Advance)
+    EJS_core = 'gba';
+
+    // 3. Name of the game (used for save states)
+    EJS_gameName = 'Pokemon FireRed';
+
+    // 4. Path or URL to your Pokémon FireRed ROM file
+    EJS_gameUrl = 'roms/pokemon_firered.gba';
+
+    // 5. Path to the EmulatorJS core data folder (default CDN or self-hosted)
+    EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
+  </script>
+
+  <!-- Load the EmulatorJS Loader -->
+  <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+
+</body>
+</html>
